@@ -4,10 +4,12 @@ var numbers = [1, 2, 3, 4, 5];
 // Create a variable to hold the sum
 var sum = 0;
 
-// Loop over the array, incrementing the sum variable
-numbers.forEach((number) => {
+adder = (number) => {
   sum += number;
-});
+};
+
+// Loop over the array, incrementing the sum variable
+numbers.forEach(adder);
 
 // print the sum varibale
 console.log(sum);
