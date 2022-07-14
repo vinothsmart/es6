@@ -1,8 +1,8 @@
 // Create an array of numbers
-var numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
 // Create a variable to hold the sum
-var sum = 0;
+let sum = 0;
 
 adder = (number) => {
   sum += number;
