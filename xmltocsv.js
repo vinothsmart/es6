@@ -18,3 +18,7 @@ const xmlData = `<?xml version="1.0"?>
 const xmlToJson = require("xml-to-json");
 const json = xmlToJson.parse(xmlData);
 console.log(JSON.stringify(json, null, 2));
+
+https://davidwalsh.name/convert-xml-json#:~:text=If%20you'd%20like%20the,XML%20and%20use%20JSON%20instead
+
+https://gist.github.com/chinchang/8106a82c56ad007e27b1
