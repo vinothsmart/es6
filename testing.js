@@ -288,7 +288,7 @@ const expectedJson1 = [
 
 
 
-const jsonData = [
+const jsonData1 = [
   {
     name: ["Root Suite"],
     timestamp: ["2022-07-12T13:10:55"],
@@ -377,7 +377,7 @@ const jsonData = [
     ],
   },
 ];
-const FilterByFileAndTestCase = (data) => {
+const FilterByFileAndTestCase1 = (data) => {
     
   return data.map((item) => {
        const commonData = [];
@@ -399,5 +399,5 @@ const FilterByFileAndTestCase = (data) => {
   });
 };
 
-const output = [['filename','testcase'],...FilterByFileAndTestCase(jsonData).flat()];
-console.log(output);
+const output1 = [['filename','testcase'],...FilterByFileAndTestCase1(jsonData1).flat()];
+console.log(output1);
