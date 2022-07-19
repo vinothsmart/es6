@@ -213,13 +213,6 @@ const expectedObject = [
   },
 ];
 
-const outputDataReturned = [
-  ["FileName1.js"],
-  [["Case1_1", "Case1_2", "Case1_3", "Case1_4", "Case1_5", "Case1_6"]],
-  ["FileName2.js"],
-  [["Case2_1"]],
-];
-
 const outputDataReturned1 = [
   ["FileName1.js"],
   [["Case1_1", "Case1_2", "Case1_3", "Case1_4", "Case1_5", "Case1_6"]],
@@ -229,7 +222,8 @@ const outputDataReturned1 = [
 
 const expectedArray1 = [
   ["FileName", "TestCases"],
-  ["FileName1.js", "Case1_1,"],
+  ["FileName1.js", ""],
+  ["", "Case1_1,"],
   ["", "Case1_2,"],
   ["", "Case1_3,"],
   ["", "Case1_4,"],
@@ -245,7 +239,11 @@ const expectedJson1 = [
   },
   {
     FileName: "FileName1.js",
-    TestCases: "Case1_1,",
+    TestCases: "",
+  },
+  {
+    FileName: "",
+    TestCases: "Case1_2,",
   },
   {
     FileName: "",
