@@ -229,7 +229,8 @@ const expectedArray1 = [
   ["", "Case1_4,"],
   ["", "Case1_5,"],
   ["", "Case1_6,"],
-  ["FileName2.js", "Case2_1,"],
+  ["FileName2.js", ""],
+  ["", "Case2_1"],
 ];
 
 const expectedArray2 = [
@@ -274,6 +275,10 @@ const expectedJson1 = [
   },
   {
     FileName: "FileName2.js",
+    TestCases: "",
+  },
+  {
+    FileName: "",
     TestCases: "Case2_1,",
   },
 ];
