@@ -232,6 +232,17 @@ const expectedArray1 = [
   ["FileName2.js", "Case2_1,"],
 ];
 
+const expectedArray2 = [
+  ["FileName", "TestCases"],
+  ["FileName1.js", "Case1_1"],
+  ["", "Case1_2,"],
+  ["", "Case1_3,"],
+  ["", "Case1_4,"],
+  ["", "Case1_5,"],
+  ["", "Case1_6,"],
+  ["FileName2.js", "Case2_1,"],
+];
+
 const expectedJson1 = [
   {
     FileName: "FileName",
@@ -239,11 +250,7 @@ const expectedJson1 = [
   },
   {
     FileName: "FileName1.js",
-    TestCases: "",
-  },
-  {
-    FileName: "",
-    TestCases: "Case1_2,",
+    TestCases: "Case1_1",
   },
   {
     FileName: "",
