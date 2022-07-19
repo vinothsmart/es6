@@ -10,6 +10,9 @@ function handlePosts() {
   //   }
 
   posts.forEach(function (post) {
+    console.log(post);
     savePost(post);
   });
 }
+
+console.log(handlePosts());
