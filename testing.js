@@ -283,11 +283,6 @@ const expectedJson1 = [
   },
 ];
 
-
-
-
-
-
 const jsonData1 = [
   {
     name: ["Root Suite"],
@@ -377,27 +372,31 @@ const jsonData1 = [
     ],
   },
 ];
-const FilterByFileAndTestCase1 = (data) => {
-    
+
+const filterByFileAndTestCase = (data) => {
   return data.map((item) => {
-       const commonData = [];
-       const file=[];
-     if (item.tests.includes("0")) {
-             file.push(item.file[0])
-             file.push("")
-            commonData.push(file);
-       } else{
-          item.testcase.map((testCase) => {
-              let test=[];
-              test.push("");
-              test.push(testCase.classname[0]);
-              commonData.push(test);
-          });
-       }
-      
-    return commonData;
+    const fileTestCaseData = [];
+    const fileNameData = [];
+    if (item.tests.includes("0")) {
+      fileNameData.push(item.file[0]);
+      fileNameData.push("");
+      fileTestCaseData.push(fileNameData);
+    } else {
+      item.testcase.map((testCase) => {
+        const testcaseData = [];
+        testcaseData.push("");
+        testcaseData.push(testCase.classname[0]);
+        return fileTestCaseData.push(testcaseData);
+      });
+    }
+    return fileTestCaseData;
   });
 };
 
-const output1 = [['filename','testcase'],...FilterByFileAndTestCase1(jsonData1).flat()];
+const output1 = [
+  ["filename", "testcase"],
+  ...filterByFileAndTestCase(jsonData1).flat(),
+];
 console.log(output1);
+
+
