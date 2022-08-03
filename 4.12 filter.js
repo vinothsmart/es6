@@ -14,3 +14,8 @@ for (let i = 0; i < products.length; i++) {
 }
 
 console.log(filteredProdcuts);
+
+const productFilter  =products.filter((product) => product.type === "fruit");
+
+console.log(productFilter);
+
