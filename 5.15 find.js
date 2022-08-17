@@ -10,12 +10,6 @@ const users = [
   },
 ];
 
-var user;
-for (var i = 0; i < users.length; i++) {
-  if (users[i].name === "John") {
-    user = users[i];
-    break;
-  }
-}
+const findUser = users.find((user) => user.name === "John");
 
-console.log(user);
+console.log(findUser);
