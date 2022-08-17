@@ -1,10 +1,10 @@
-const car = (name) => {
-  return {
-    model: name,
-  };
-};
+const posts = [
+  { id: 1, title: "New Post" },
+  { id: 2, title: "Old Post" },
+];
 
-const cars = [car("Honda"), car("Toyota"), car("Tata")];
+const comment = { postId: 1, content: "Great Post" };
 
-console.log(cars);
-const findCar = cars.find((car) => car.model === "Tata");
+const postForComment = posts.find((post) => post.id === comment.postId);
+
+console.log(postForComment);
