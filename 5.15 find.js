@@ -1,12 +1,17 @@
 const users = [
   {
-    name: "John",
+    name: "John1",
+    age: 20,
+    surname: "Johnson",
   },
   {
     name: "Mary",
   },
   {
     name: "Mike",
+  },
+  {
+    name: "John",
   },
 ];
 
