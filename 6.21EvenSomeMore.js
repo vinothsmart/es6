@@ -7,5 +7,11 @@ filed.prototype.validate = function () {
 
 const username = new filed("2Cool");
 const password = new filed("my_password");
+const birthday = new filed("13/06/1990");
 
-console.log(username.validate() && password.validate());
+// console.log(username.validate() && password.validate());
+
+const fields = [username, password, birthday];
+const isFormValid = fields.every((field) => field.validate());
+
+console.log(isFormValid);
