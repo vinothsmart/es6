@@ -10,3 +10,6 @@ const findWhere = (array, criteria) => {
 };
 
 findWhere(ladders, { height: "20 feet" });
+
+// another solution
+const find20FeetLadder = ladders.find((ladder) => ladder.height === "20 feet");
