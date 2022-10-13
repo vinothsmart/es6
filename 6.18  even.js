@@ -18,9 +18,13 @@ for (let i = 0; i < computers.length; i++) {
   }
 }
 
-console.log(allComputersCanRunProgram);
-console.log(onlySomeComputersCanRunProgram);
+// console.log(allComputersCanRunProgram);
+// console.log(onlySomeComputersCanRunProgram);
 
 const resultEven = computers.every((computer) => computer.ram > 16);
+// this work like && operator
+// console.log(resultEven);
 
-console.log(resultEven);
+const resultSome = computers.some((computer) => computer.ram > 16);
+// this work like || operator
+console.log(resultSome);
