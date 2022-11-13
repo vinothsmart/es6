@@ -8,3 +8,12 @@ const unique = numbers.reduce((acc, number) => {
 }, []);
 
 console.log(unique);
+
+const uniqueArray = (array) => {
+  return array.reduce((acc, number) => {
+    if (!acc.includes(number)) {
+      acc.push(number);
+    }
+    return acc;
+  }, []);
+};
