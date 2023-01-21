@@ -1,5 +1,3 @@
-const add = function (a, b) {
-  return a + b;
-};
-
-console.log(add(1, 2));
+const add = (a, b) => a + b;
+const newSum = add(1, 2);
+console.log(newSum);
