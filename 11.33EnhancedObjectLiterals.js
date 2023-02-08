@@ -1,10 +1,10 @@
 const createBookShop = (inventory) => {
   return {
-    inventory: inventory,
-    inventoryValue: function () {
+    inventory,
+    inventoryValue() {
       return this.inventory.reduce((total, book) => total + book.price, 0);
     },
-    priceForTitle: function (title) {
+    priceForTitle(title) {
       return this.inventory.find((book) => book.title === title).price;
     },
   };
