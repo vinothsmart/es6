@@ -1,8 +1,8 @@
 function saveFile(url, data) {
   $.ajax({
+    url,
+    data,
     method: "POST",
-    url: url,
-    data: data,
   });
 }
 
