@@ -1,6 +1,6 @@
 const fields = ["firstName", "lastName", "phoneNumber"];
 
-const props = { fields: fields };
+const props = { fields };
 
 console.log(props.fields[0]);
 console.log(props.fields[1]);
