@@ -1,4 +1,4 @@
-const canvasDimensions = function (width, initialHeight) {
+const canvasDimensions = (width, initialHeight) => {
   const height = (initialHeight * 9) / 16;
   return {
     width,
