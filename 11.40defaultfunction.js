@@ -11,4 +11,4 @@ function createAdminUser(user) {
   return user;
 }
 
-createAdminUser(new User(generateId()));
+console.log(createAdminUser(new User(generateId())));
