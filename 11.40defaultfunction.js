@@ -6,9 +6,9 @@ function generateId() {
   return Math.random() * 99999999;
 }
 
-function createAdminUser(user) {
+function createAdminUser(user = new User(generateId())) {
   user.admin = true;
   return user;
 }
 
-console.log(createAdminUser(new User(generateId())));
+console.log(createAdminUser());
