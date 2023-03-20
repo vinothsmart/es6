@@ -4,4 +4,10 @@ const fallColors = ["fire red", "fall orange"];
 
 console.log(defaultColors.concat(userFavoriteColors));
 
-console.log([...fallColors, ...defaultColors, ...userFavoriteColors]);
+console.log([
+  "green",
+  "blue",
+  ...fallColors,
+  ...defaultColors,
+  ...userFavoriteColors,
+]);
