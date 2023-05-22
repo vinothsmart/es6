@@ -4,8 +4,12 @@ const savedFiled = {
   size: 14040,
 };
 
-function fileSummary({ name, extension, size }) {
-  return `The file ${name}.${extension} is of size ${size}`;
+function fileSummary({ name, extension, size }, { color }) {
+  return `${color} The file ${name}.${extension} is of size ${size}`;
 }
 
-console.log(fileSummary(savedFiled));
+console.log(
+  fileSummary(savedFiled, {
+    color: "red",
+  })
+);
