@@ -9,3 +9,13 @@ console.log(name3);
 console.log(name4);
 
 console.log(firstCompany);
+
+const { length } = compaines;
+
+console.log(length);
+
+const [name, ...rest] = compaines;
+
+console.log(rest);
+
+console.log(compaines[1]);
