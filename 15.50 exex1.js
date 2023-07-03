@@ -9,6 +9,6 @@ class Monster {
   }
 }
 
-console.log("-----");
-const monster = new Monster({ name: "Monster1" });
-console.log(monster);
+// console.log("-----");
+// const monster = new Monster({ name: "Monster1" });
+// console.log(monster);
