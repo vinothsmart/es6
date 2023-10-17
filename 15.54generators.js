@@ -14,28 +14,35 @@ const engineeringTeam = {
   lead: "Jill",
   manager: "Alex",
   engineer: "Dave",
+  [Symbol.iterator]: function* () {
+    yield this.lead;
+    yield this.manager;
+    yield this.engineer;
+    yield* this.testingTeam;
+  },
 };
 
-function* TeamIterator(team) {
-  yield team.lead;
-  yield team.manager;
-  yield team.engineer;
-  // yield team.testingTeam.lead;
-  // yield team.testingTeam.tester;
-  // with generator delegation same output as above
-  // const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
-  // yield* testingTeamGenerator;
-  // another way to do it
-  yield* team.testingTeam;
-}
+// function* TeamIterator(team) {
+//   yield team.lead;
+//   yield team.manager;
+//   yield team.engineer;
+//   // yield team.testingTeam.lead;
+//   // yield team.testingTeam.tester;
+//   // with generator delegation same output as above
+//   // const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+//   // yield* testingTeamGenerator;
+//   // another way to do it
+//   yield* team.testingTeam;
+// }
 
-function* TestingTeamIterator(team) {
-  yield team.lead;
-  yield team.tester;
-}
+// function* TestingTeamIterator(team) {
+//   yield team.lead;
+//   yield team.tester;
+// }
 
 const names = [];
-for (let name of TeamIterator(engineeringTeam)) {
+// for (let name of TeamIterator(engineeringTeam)) {
+for (let name of engineeringTeam) {
   names.push(name);
 }
 
