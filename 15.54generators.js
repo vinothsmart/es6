@@ -1,6 +1,10 @@
 const testingTeam = {
   lead: "Amanda",
   tester: "Bill",
+  [Symbol.iterator]: function* () {
+    yield this.lead;
+    yield this.tester;
+  },
 };
 
 const engineeringTeam = {
@@ -19,8 +23,10 @@ function* TeamIterator(team) {
   // yield team.testingTeam.lead;
   // yield team.testingTeam.tester;
   // with generator delegation same output as above
-  const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
-  yield* testingTeamGenerator;
+  // const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+  // yield* testingTeamGenerator;
+  // another way to do it
+  yield* team.testingTeam;
 }
 
 function* TestingTeamIterator(team) {
