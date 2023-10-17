@@ -17,6 +17,10 @@ function* TeamIterator(team) {
   yield team.manager;
   yield team.engineer;
   // yield team.testingTeam.lead;
+  // yield team.testingTeam.tester;
+  // with generator delegation same output as above
+  const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+  yield* testingTeamGenerator;
 }
 
 function* TestingTeamIterator(team) {
@@ -29,4 +33,4 @@ for (let name of TeamIterator(engineeringTeam)) {
   names.push(name);
 }
 
-console.log(names); // ["Jill", "Alex", "Dave"]
+console.log(names); // ["Jill", "Alex", "Dave"] const testingTeamGenerator = TestingTeamIterator(team.testingTeam); after that [ 'Jill', 'Alex', 'Dave', 'Amanda', 'Bill' ]
