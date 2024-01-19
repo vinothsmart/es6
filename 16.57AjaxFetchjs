@@ -1,5 +1,8 @@
-url = "https://api.github.com/users";
+url = "https://api.github123.com/users1";
+fetch(url)
+  .then((response) => console.log(response))
+  .catch((error) => console.log("BAD", error));
 
-fetch(url).then((response) =>
-  response.json().then((data) => console.log(data))
-);
+// fetch(url).then((response) =>
+//   response.json().then((data) => console.log(data))
+// );
